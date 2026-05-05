@@ -1,0 +1,25 @@
+.alert {
+    --size: 20px;
+
+    display: grid;
+    grid-template-rows: var(--size) 1fr;
+    grid-template-columns: var(--size) 1fr;
+    gap: 0 1rem;
+    border-left: 4px solid orange;
+    padding: 8px 16px;
+    margin: 1rem 0;
+
+    & .icon {
+        background-image: url(../svg/a.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    & .title {
+        color: orange;
+    }
+
+    & p {
+        grid-column: span 2;
+    }
+}

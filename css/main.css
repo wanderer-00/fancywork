@@ -1,24 +1,80 @@
+/* Светлая тема */
 :root {
     --text-color: #333333;
     --bg-color: #F5F5F5;
+    --a-color: blue;
+
+    box-sizing: border-box;
 }
 
+/* Тёмная тема */
 @media (prefers-color-scheme: dark) {
     :root {
         --text-color: #f5f5f5;
         --bg-color: #121212;
+        --a-color: red;
+
+        box-sizing: border-box;
+    }
+}
+
+@font-face {
+    font-family: 'RobotoCondensed'; /* Имя для использования в стилях */
+    src: url('../font/RobotoCondensed/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400; /* Начертание: 400=Regular, 700=Bold */
+    font-style: normal; /* Стиль: normal или italic */
+    font-display: swap; /* Защита от мигания текста */
+}
+
+/* Применить ко всему сайту */
+::selection {
+  background-color: var(--a-color);
+  color: var(--text-color);
+}
+
+a {
+    color: var(--a-color);
+
+    &::selection {
+        background-color: var(--a-color);
+        color: var(--bg-color);
     }
 }
 
 body {
+    min-height: calc(100vh - 2rem);
+    margin: 0;
+    padding: 1rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas: "header main footer";
     color: var(--text-color);
-    font-family: monospace;
+    font-family: 'RobotoCondensed', cursive;
     background-color: var(--bg-color);
 }
 
-.wrapper {
-    width: 70%;
-    margin: auto;
+header {
+    height: 100vh;
+    position: fixed;
+    grid-area: header;
+
+    & ul {
+        list-style: none; /* Убирает маркеры (точки) */
+        margin: 0;        /* Убирает внешние отступы */
+        padding: 0;       /* Убирает внутренние отступы */
+    }
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    -webkit-writing-mode: vertical-rl; /* Для Safari */
+    writing-mode: vertical-rl; /* Справа налево, основной метод */
 }
 
 video {

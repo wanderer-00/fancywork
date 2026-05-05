@@ -4,48 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мануал по вышивке</title>
+    <!-- общие стили -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- уведомления / сноски -->
+    <link rel="stylesheet" href="css/alert.css">
 </head>
 <body>
     <header>
-        <div class="wrapper"></div>
-    </header>
-    <main>
-        <div class="wrapper">
-            <h1>Вишивка на промышленном аппарате</h1>
-            <ol>
-                <li><a href="">Подготовка</a></li>
+        <nav>
+            <ul>
+                <li><a href="#usb">Подготовка накопителя</a></li>
                 <li><a href="">Программа</a></li>
                 <li><a href="">Создание макетов</a></li>
-            </ol>
-            
-            <h2>Подготовка USB-накопителя</h2>
-            <p>USB-накопитель он же "флешка" должен быть подготовлен. Сменить файловую систему накопителя, понятную большинству устройств <b>FAT32</b></p>
-            <ul>
-                <li>Объём накопителя менее или равен 4Gb</li>
-                <li>Файловая система <b>FAT32</b></li>
             </ul>
-            <p>Ваш станок может и поддерживает накопители большого объёма, читать инструкцию нужно, если хочешь узнать максимальный объём накопителя, поддерживаемого твоим станком</p>
-            <p>Ваш станок может и поддерживает другие файловые системы, но стандартом, понимаемым почти любой аппаратурой является <b>FAT32</b></p>
-            <div class="alert">Перенесите файлы! Смена файловой системы требует удаления всех файлов с USB-накопителя!</div>
-            
-            <video controls autoplay muted>
-                <source src="video/usb_flash.mp4" type="video/mp4">
-                <track 
-                    kind="subtitles" 
-                    src="video/usb_flash.vtt"
-                    srclang="ru"
-                    label="Русский"
-                    default>
-            </video>
+        </nav>
+    </header>
+    <main>
+        <h1>Машинная вышивка от и до с математической точностью</h1>
+        <div id="poster"></div>
 
-            <h2>Станок</h2>
-            <p>Множество китайских станков ничем не отличается, кроме названия и цвета корпуса. Подавляющее множество работает на одной плате, с одинаковой операционной системой и с одним и тем же ядром.</p>
-            <p>Формат файлов <code>.DST</code></p>
+        <h2 id="usb">Подготовка USB-накопителя</h2>
+        <ul>
+            <li>Объём накопителя менее или равен 4Gb</li>
+            <li>Файловая система <b>FAT32</b></li>
+        </ul>
+
+        <div class="alert">
+            <div class="icon"></div>
+            <div class="title">Внимание!</div>
+            <p>Перенесите файлы! Смена файловой системы требует удаления всех файлов с USB-накопителя!</p>
         </div>
+
+        <h2>Расходники</h2>
+        <ul>
+            <li>Иглы - <a href="https://portal.groz-beckert.com/germany/sewing/en/products/773232/detail">GROZ-BECKERT</a></li>
+            <li>Нитки - <a href="https://www.euronitka.ru/products?selectedBrands[2]=Euron">EURON</a></li>
+            <li>Фиксатор (флезелин) - <a href="#">ничего</a></li>
+        </ul>
+
+        <h2>Ink Stitch</h2>
+        <p><a href="https://inkstitch.org/">Ink Stitch</a> - расширение для создания макетов машинной вышивки в программе <a href="https://inkscape.org/">InkSkape</a></p>
     </main>
     <footer>
-        <div class="wrapper"></div>
+        <h1>ZOJE-1202HC (400x500)</h1>
     </footer>
 </body>
 </html>
