@@ -41,13 +41,33 @@ a {
     }
 }
 
+/* выравнивание списков по левому краю */
+ul {
+    margin: 0;
+    padding: 0;
+    
+    /* Перемещаем маркеры внутрь блока li */
+    list-style-position: inside;
+} li {
+    margin: 0;
+    padding: 0;
+} li::marker {
+    color: var(--a-color);       /* Цвет маркера */
+    content: "\2726  ";        /* Заменяем точку на символ или эмодзи 🚀 */
+    font-size: 1.2em;     /* Размер маркера */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: calc(100vh - 2rem);
     margin: 0;
     padding: 1rem;
     display: grid;
     gap: 3rem;
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 300px 1fr 300px;
     grid-template-areas: "header main footer";
     color: var(--text-color);
     font-family: 'RobotoCondensed', cursive;
@@ -59,11 +79,22 @@ header {
     position: fixed;
     grid-area: header;
 
-    & ul {
+    & nav > ul {
         list-style: none; /* Убирает маркеры (точки) */
         margin: 0;        /* Убирает внешние отступы */
         padding: 0;       /* Убирает внутренние отступы */
+
+        & > li::marker {
+            content: "";        /* Заменяем точку на символ или эмодзи 🚀 */
+        }
     }
+} li {
+    margin: 0;
+    padding: 0;
+} li::marker {
+    color: var(--a-color);       /* Цвет маркера */
+    content: "\2726  ";        /* Заменяем точку на символ или эмодзи 🚀 */
+    font-size: 1.2em;     /* Размер маркера */
 }
 
 main {
@@ -83,4 +114,12 @@ video {
     margin: 0 auto;
     max-width: 100%;
     border: 2px solid #343434;
+}
+
+img {
+    max-width: 20%;
+}
+
+h2 {
+    margin-top: 5rem;
 }
