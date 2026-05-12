@@ -1,12 +1,14 @@
 :root {
-    --border-width: 10px;
+    --border-width: 12px;
+    --padding: 1rem;
 }
 
 #cluster {
-    display: flex;
+    width: calc( 900px + var(--border-width) * 2 );
+    padding: var(--padding);
+    margin: 0 auto;
     gap: 1rem;
-    flex-wrap: wrap;
-    align-items: flex-start; /* или center, или flex-end */
+    background-color: rgba(0, 0, 0,.1);
 }
 
 .card {
@@ -15,8 +17,8 @@
     border: var(--border-width) solid green;
     border-radius: 100px;
     display: flex;
-    justify-content: center; /* по горизонтали */
-    align-items: center;     /* по вертикали */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     position: relative;
 
