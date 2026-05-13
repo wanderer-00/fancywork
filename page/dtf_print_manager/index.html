@@ -3,10 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/print-settings-clean.css">
     <title>Инструкция по PM</title>
 </head>
 <body>
     <h1>Инструкция по программе управления принтером</h1>
-    
+    <!-- 1380x758px -->
+    <div id="print-settings-clean">
+        <div id="tab-clean" class="bordered">
+            <div class="bordered">
+                <div>
+                    <span class="area-title">Basic settings</span>
+                    <div>
+                        <label for="vsd-select">VSD</label>
+
+                        <select name="vsd" id="vsd-select">
+                            <option value="vsd1">VSD1</option>
+                            <option value="vsd2">VSD2</option>
+                            <option value="vsd3">VSD3</option>
+                            <option value="vsd4">VSD4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bordered">
+                    <div class="title">Auto-cleaning when printing</div>
+                </div>
+                <div class="bordered">
+                    <div class="title">
+                        <input type="checkbox">
+                        Auto-cleaning when standby
+                    </div>
+                </div>
+                <div class="bordered">
+                    <div class="title">keyboard cleaning settings</div>
+                </div>
+                <div class="bordered">
+                    <div class="title">
+                        <input type="checkbox">
+                        Auto-moisturizing
+                    </div>
+                </div>
+            </div>
+            <div id="parameters-settings">
+                <div>
+                    <span class="area-title">Parameters settings</span>
+
+                    <label for="">Waste ink time (ms):</label><input type="number" value="3000.00">
+
+                    <div>
+                        <button>Do Action</button>
+                        <button>Load</button>
+                        <button>Save</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="title">Ink Stack Settings ( Height Unit: mm )</div>
+                    <div id="ink-stack-settings">
+                        <div>
+                            <input type="radio">
+                            <span>Clean height</span>
+                            <input type="number" value="18">
+                        </div>
+
+                        <div>
+                            <input type="radio">
+                            <span>Clean height</span>
+                            <input type="number" value="10">
+                        </div>
+
+                        <div title="Высота при простое принтера (0 - 24 (крайнее значение) )">
+                            <input type="radio">
+                            <span>Ожидание</span>
+                            <input type="number" value="18">
+                        </div>
+
+                        <div>
+                            <input type="radio">
+                            <span>Clean height</span>
+                            <input type="number" value="10">
+                        </div>
+
+                        <div>
+                            <input type="radio">
+                            <span>Clean height</span>
+                            <input type="number" value="10">
+                        </div>
+
+                        <div title="Высота, на которую поднимается ракель (0 - 15 (крайнее значение) )">
+                            <input type="radio">
+                            <span>Ракель</span>
+                            <input type="number" value="15" >
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
